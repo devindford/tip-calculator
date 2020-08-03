@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- * Add for SEO -->
+    <meta name="description" content="JavaScript Tip Calculator" />
+    <!-- * Add for SEO and web crawlers, appear on google faster-->
+    <meta name="robots" content="index, follow" />
+    <!-- * Changes icon in title tab -->
+    <link rel="icon" href="./assets/calculator-icon_34473.ico" />
+    <link rel="stylesheet" href="./style/style.css" />
+    <title>Tip Calculator</title>
+  </head>
+  <body>
+    <main id="container">
+      <h1>Quick Tip Calculator</h1>
+      <section class="tip-calculator">
+        <div class="bill-section">
+          <label for="yourBill">Bill</label>
+          <input type="number" placeholder="0.00" id="yourBill" />
+        </div>
+        <div class="tip-percentage">
+          <div class="space-between">
+            <label for="tipInput">Select Tip</label>
+            <span id="tipPercent">0%</span>
+          </div>
+          <input type="range" class="range" value="0" id="tipInput" />
+        </div>
+        <div class="tip-value space-between">
+          <span>Tip</span>
+          <span id="tipValue">$0</span>
+        </div>
+        <hr />
+        <div class="total space-between">
+          <span>Total</span>
+          <span id="totalWithTip"></span>
+        </div>
+      </section>
+      <section class="bill-split">
+        <div class="split-input space-between">
+          <label for="splitInput">Split</label>
+          <span id="splitValue">1 Person</span>
+        </div>
+        <input
+          type="range"
+          class="range"
+          min="1"
+          max="10"
+          value="1"
+          id="splitInput"
+        />
+        <div class="space-between">
+          <span>Total each</span>
+          <span id="billEach"></span>
+        </div>
+        <div class="space-between">
+          <span>Tip Each</span>
+          <span id="tipEach"></span>
+        </div>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
